@@ -86,13 +86,7 @@ pub fn get_total_wordcounts(text: &str) -> Vec<i32>{
 pub fn unique_and_total(text: &str) {
     let second_count = unique_counting(text);
     let total_wordcounts = get_total_wordcounts(text);
-    zip_vecs(second_count, total_wordcounts);
-}
-
-pub fn scatterplot_string(text: &str) {
-    let second_count = unique_counting(text);
-    let total_wordcounts = get_total_wordcounts(text);
-    zip_vecs(second_count, total_wordcounts);
+    zip_vecs_no_graph(second_count, total_wordcounts);
 }
 
 pub fn scatterplot(file: &str) {
@@ -104,6 +98,11 @@ pub fn scatterplot(file: &str) {
 pub fn zip_vecs(unique_counts: Vec<i32>, total_counts: Vec<i32>) {
     let combined_vector = unique_counts.into_iter().zip(total_counts).collect::<Vec<_>>();
     graph_scatter(combined_vector);
+}
+
+pub fn zip_vecs_no_graph(unique_counts: Vec<i32>, total_counts: Vec<i32>) ->  Vec<(i32, i32)>{
+    let combined_vector = unique_counts.into_iter().zip(total_counts).collect::<Vec<_>>();
+    combined_vector
 }
 
 pub fn graph_scatter(combined_vector: Vec<(i32, i32)>) {
