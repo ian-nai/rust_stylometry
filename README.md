@@ -21,8 +21,8 @@ scatterplot("path/to/file.txt"); // this will output a .png showing a scatterplo
 ```
 use stylometry::kilgariff;
 
-kilgariff("path/to/file1_known_author.txt", "path/to/file2_disputed_author.txt"); // this will print the result of the Kilgariff 
-// chi-squared formula for texts you're comparing
+kilgariff("path/to/file1_known_author.txt", "path/to/file2_disputed_author.txt"); // this will print the result of 
+//the Kilgariff chi-squared formula for texts you're comparing
 ```
 
 ```
