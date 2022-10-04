@@ -14,19 +14,22 @@ mendenhall("path/to/file.txt"); // this will output a .png of a line graph of th
 use stylometry::scatterplot;
 // or, if graphing a string rather than reading from a file: use stylometry::mendenhall_string;
 
-scatterplot("path/to/file.txt"); // this will output a .png showing a scatterplot of the text's word lengths, similar to the line graph in the mendenhall function
+scatterplot("path/to/file.txt"); // this will output a .png showing a scatterplot of the text's word lengths, 
+// similar to the line graph in the mendenhall function
 ```
 
 ```
 use stylometry::kilgariff;
 
-kilgariff("path/to/file1_known_author.txt", "path/to/file2_disputed_author.txt"); // this will print the result of the Kilgariff chi-squared formula for texts you're comparing
+kilgariff("path/to/file1_known_author.txt", "path/to/file2_disputed_author.txt"); // this will print the result of the Kilgariff 
+// chi-squared formula for texts you're comparing
 ```
 
 ```
 use stylometry::hapax;
 
-hapax("path/to/file1.txt", "path/to/file2.txt"); // this will return a vec of words only found in file1 (and which only occur once in that file)
+hapax("path/to/file1.txt", "path/to/file2.txt"); // this will return a vec of words only found in file1 
+// (and which only occur once in that file)
 ```
 ```
 use stylometry::hapax_single;
